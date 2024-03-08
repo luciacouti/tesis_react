@@ -785,15 +785,6 @@ success crear perrito
   font-family: "Open Sans", sans-serif;
 }
 
-.navbar div.mr-auto {
-  color: #454545;
-  transition: 0.3s;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-  font-family: "Open Sans", sans-serif;
-}
-
 .nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a {

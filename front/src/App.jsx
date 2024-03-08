@@ -80,7 +80,7 @@ export function App() {
             />
             <Collapse in={open} id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <ul className="navbar-nav">
+                <ul className="navbar-mob">
                   <li className="nav-item">
                     <Link to="/" onClick={() => setOpen(false)}>
                       Inicio
@@ -104,7 +104,7 @@ export function App() {
                   </li>
                   {/* Agrega aquí los demás enlaces */}
                 </ul>
-                <ul className="navbar-nav justify-content-center ml-auto mb-2 mb-lg-0">
+                <ul className="navbar-mob justify-content-center ml-auto mb-2 mb-lg-0">
                   {token ? (
                     <>
                       <li className="nav-item">
