@@ -1794,3 +1794,7 @@ section {
     font-size: 18px !important;
   }
 }
+
+.mascota-list .titulo-seccion {
+  margin-top: 100px;
+}
