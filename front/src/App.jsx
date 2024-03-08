@@ -80,63 +80,16 @@ export function App() {
             />
             <Collapse in={open} id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <ul className="navbar-mob">
-                  <li className="nav-item">
-                    <Link to="/" onClick={() => setOpen(false)}>
-                      Inicio
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      to="/mascotas/perdidos"
-                      onClick={() => setOpen(false)}
-                    >
-                      Perdidos
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      to="/mascotas/encontrados"
-                      onClick={() => setOpen(false)}
-                    >
-                      Encontrados
-                    </Link>
-                  </li>
-                  {/* Agrega aquí los demás enlaces */}
-                </ul>
-                <ul className="navbar-mob justify-content-center ml-auto mb-2 mb-lg-0">
-                  {token ? (
-                    <>
-                      <li className="nav-item">
-                        {" "}
-                        <Link to="/profile" onClick={() => setOpen(false)}>
-                          Cuenta
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        {" "}
-                        <Link to="/logout" onClick={() => setOpen(false)}>
-                          Cerrar sesión
-                        </Link>
-                      </li>
-                    </>
-                  ) : (
-                    <>
-                      <li className="nav-item">
-                        {" "}
-                        <Link to="/register" onClick={() => setOpen(false)}>
-                          Registrate
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        {" "}
-                        <Link to="/login" onClick={() => setOpen(false)}>
-                          Iniciar sesión
-                        </Link>
-                      </li>
-                    </>
-                  )}
-                </ul>
+                <Link to="/" onClick={() => setOpen(false)}>
+                  Inicio
+                </Link>
+                <Link to="/mascotas/perdidos" onClick={() => setOpen(false)}>
+                  Perdidos
+                </Link>
+                <Link to="/mascotas/encontrados" onClick={() => setOpen(false)}>
+                  Encontrados
+                </Link>
+                {/* Agrega aquí los demás enlaces */}
               </Nav>
             </Collapse>
           </div>
