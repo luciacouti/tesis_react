@@ -1,7 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
-import { useContext, useEffect, useRef, useState } from "react"; // Importa useEffect y useRef
+import { useContext, useEffect, useRef } from "react"; // Importa useEffect y useRef
 import { AuthContext } from "./pages/user/AuthContext";
-import { Collapse, Navbar, Nav } from "react-bootstrap";
 
 import "minireset.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -12,7 +11,6 @@ import appLogo from "./assets/img/logo_horizontal.png";
 import "./App.css";
 
 export function App() {
-  const [open, setOpen] = useState(false);
   const { token } = useContext(AuthContext);
   const navbarRef = useRef(null); // Referencia al navbar
 
@@ -61,59 +59,76 @@ export function App() {
   return (
     <div className="App">
       <header id="header" className="fixed-top mb-5">
-        <Navbar className="navbar navbar-expand-lg py-0 px-md-4" expand="lg">
+        <nav className="navbar navbar-expand-lg py-0 px-md-4" ref={navbarRef}>
           <div className="container-fluid">
             <Link to="/">
+              {" "}
               <div className="logo mx-auto mx-lg-1 mr-lg-auto">
                 <img
                   src={appLogo}
                   alt="Logo Huellas a casa"
                   className="img-fluid"
                   id="logo-header"
-                />
-              </div>
+                />{" "}
+              </div>{" "}
               <h1 className="d-none">Huellas a Casa</h1>
             </Link>
-            <Navbar.Toggle
-              aria-controls="responsive-navbar-nav"
-              onClick={() => setOpen(!open)}
-            />
-            <Collapse in={open} id="responsive-navbar-nav">
-              <Nav className="mr-auto">
-                <Link to="/" onClick={() => setOpen(false)}>
-                  Inicio
-                </Link>
-                <Link to="/mascotas/perdidos" onClick={() => setOpen(false)}>
-                  Perdidos
-                </Link>
-                <Link to="/mascotas/encontrados" onClick={() => setOpen(false)}>
-                  Encontrados
-                </Link>
+            <button
+              className="navbar-toggler navbar-dark"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse nav-menu" id="navbarNav">
+              <ul className="navbar-nav justify-content-center me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link to="/" onClick={collapseNavbar}>
+                    Inicio
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <li>
+                    <Link to="/mascotas/perdidos">Perdidos</Link>
+                  </li>
+                </li>
+                <li className="nav-item">
+                  {" "}
+                  <Link to="/mascotas/encontrados">Encontrados</Link>
+                </li>
+              </ul>
+              <ul className="navbar-nav justify-content-center ml-auto mb-2 mb-lg-0">
                 {token ? (
                   <>
-                    <Link to="/profile" onClick={() => setOpen(false)}>
-                      Cuenta
-                    </Link>
-
-                    <Link to="/logout" onClick={() => setOpen(false)}>
-                      Cerrar sesión
-                    </Link>
+                    <li className="nav-item">
+                      {" "}
+                      <Link to="/profile">Cuenta</Link>
+                    </li>
+                    <li className="nav-item">
+                      {" "}
+                      <Link to="/logout">Cerrar sesión</Link>
+                    </li>
                   </>
                 ) : (
                   <>
-                    <Link to="/register" onClick={() => setOpen(false)}>
-                      Registrate
-                    </Link>
-
-                    <Link to="/login" onClick={() => setOpen(false)}>
-                      Iniciá sesión
-                    </Link>
+                    <li className="nav-item">
+                      {" "}
+                      <Link to="/register">Registrate</Link>
+                    </li>
+                    <li className="nav-item">
+                      {" "}
+                      <Link to="/login">Iniciar sesión</Link>
+                    </li>
                   </>
                 )}
-              </Nav>
-            </Collapse>
+              </ul>
+            </div>
           </div>
-        </Navbar>
+        </nav>
       </header>
       <Outlet />
 
