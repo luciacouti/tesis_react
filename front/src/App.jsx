@@ -106,7 +106,7 @@ export function App() {
                     </Link>
 
                     <Link to="/login" onClick={() => setOpen(false)}>
-                      Iniciar sesión
+                      Iniciá sesión
                     </Link>
                   </>
                 )}
