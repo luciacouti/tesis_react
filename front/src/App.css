@@ -774,6 +774,16 @@ success crear perrito
   padding: 10px 0 10px 28px;
 }
 
+.navmobile a {
+  color: #454545;
+  transition: 0.3s;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  padding: 8px 0 8px 28px;
+}
+
 .nav-menu a {
   display: block;
   position: relative;
