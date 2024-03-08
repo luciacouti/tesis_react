@@ -89,7 +89,27 @@ export function App() {
                 <Link to="/mascotas/encontrados" onClick={() => setOpen(false)}>
                   Encontrados
                 </Link>
-                {/* Agrega aquí los demás enlaces */}
+                {token ? (
+                  <>
+                    <Link to="/profile" onClick={() => setOpen(false)}>
+                      Cuenta
+                    </Link>
+
+                    <Link to="/logout" onClick={() => setOpen(false)}>
+                      Cerrar sesión
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/register" onClick={() => setOpen(false)}>
+                      Registrate
+                    </Link>
+
+                    <Link to="/login" onClick={() => setOpen(false)}>
+                      Iniciar sesión
+                    </Link>
+                  </>
+                )}
               </Nav>
             </Collapse>
           </div>
