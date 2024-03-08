@@ -142,7 +142,7 @@ function CrearMascota() {
           </div>
         </>
       ) : (
-        <div className="formulario-carga col-12 col-sm-10 col-md-10 col-lg-8">
+        <div className="formulario-carga col-12 col-sm-10 col-md-10 col-lg-8 mx-auto">
           <form
             id="form-crear_encontrado"
             onSubmit={handleFormSubmit}

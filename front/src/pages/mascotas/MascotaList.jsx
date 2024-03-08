@@ -509,8 +509,7 @@ function MascotasList({ categoria, account }) {
                     {mascotas.length === 0 && hasAttemptedLoad ? (
                       <div className="no-results txt-center">
                         <p>
-                          ¡Lo sentimos! No hay resultados para mostrar con estos
-                          parametros de búsqueda
+                          ¡Lo sentimos! Todavía no hay resultados para mostrar
                         </p>
                         <div className="img-sorry">
                           <img

@@ -122,7 +122,7 @@ function EditarMascota({ idMascota }) {
 
   return (
     <div className="row justify-content-center">
-      <div className="formulario-carga col-12 col-sm-10 col-md-10 col-lg-8">
+      <div className="formulario-carga col-12 col-sm-10 col-md-10 col-lg-8 mx-auto">
         {/* <div className="aparecio-question">
           <p>¿Ya apareció?</p>
           <button type="button">No, todavía no</button>

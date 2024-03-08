@@ -51,7 +51,7 @@ input {
 .App :nth-of-type(2), */
 .App > div,
 .App > section {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .light {
@@ -1102,9 +1102,9 @@ a.data-letra {
 } */
 .cuenta {
   background-color: #1bb1dc;
-  margin-top: -40px !important;
+  margin-top: 10px !important;
   margin-bottom: 30px;
-  padding-top: 40px;
+  padding-top: 70px;
   padding-bottom: 20px;
 }
 .title-section.cuenta h2 {
@@ -1189,7 +1189,7 @@ a.data-letra {
   background-color: #1bb1dc;
   /* margin-top: -40px !important; */
   margin-bottom: 30px;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
