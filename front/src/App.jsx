@@ -79,7 +79,7 @@ export function App() {
               onClick={() => setOpen(!open)}
             />
             <Collapse in={open} id="responsive-navbar-nav">
-              <Nav className="mr-auto nav-menu">
+              <Nav className="mr-auto navv-menu">
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <Link to="/" onClick={() => setOpen(false)}>
